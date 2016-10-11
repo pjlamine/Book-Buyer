@@ -1,0 +1,13 @@
+<!-- {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %} -->
+
+
+<form action="/bookBuyer/isbn" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <!-- <input type ="text" /> -->
+    <input type="submit" value="Submit" />
+</form>
+
+<p>
+
+</p>

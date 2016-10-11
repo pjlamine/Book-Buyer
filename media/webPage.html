@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BookBuyer</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name">
+    <!-- <button -->
+    <!-- <button type="button" id="home" onclick="validate()" value="checkvalue"> -->
+
+    <!-- <script>
+    $('#id').click(function(){
+
+     $.ajax({
+          type:'get',
+          url:<YOUR SERVERSIDE PAGE URL>,
+          cache:false,
+          data:<if any arguments>,
+          async:asynchronous,
+          dataType:json, //if you want json
+          success: function(data) {
+            <put your custom validation here using the response from data structure >
+        }
+          error:functionfunction(data) {
+            <put your custom code here to handle the call failure>
+        }
+       }
+     );
+    });
+</script> -->
+    Enter ISBN into textbox and click submit
+    isbn: <input type="text" name="fname"><br>
+    <input type="button" onclick="loadPrice()" value="Submit">
+
+    <h1 id="demo">
+      hi
+    </h1>
+
+    <script>
+    function loadPrice(){
+      // alert("WOW");
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+      if (xhttp.readyState == 4 && xhttp.status == 200){
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+      }
+    };
+    xhttp.open("POST", "temp.py", true);
+    xhttp.send();
+  }
+
+  </script>
+
+  </body>
+</html>
